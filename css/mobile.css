@@ -1,0 +1,56 @@
+@media screen and (max-width: 700px) {
+    .main_header .header_logo {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .main_header .header_describe {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: black;
+    }
+
+    .header_function {
+        gap: 4%;
+    }
+
+    .header_function button:nth-child(1) {
+        transform: translateX(-10%);
+        font-size: 1rem;
+    }
+
+    .masked_imgage {
+        width: 250px;
+    }
+
+    .marquee {
+        left: -50%;
+        top: -30%;
+    }
+
+    .marquee_2 {
+        top: 95%;
+        right: -50%;
+    }
+
+    .network_hero h1 {
+        font-size: 3rem;
+    }
+
+    .network_hero h2 {
+        font-size: 1rem;
+    }
+
+    .list {
+        margin: 26px auto;
+
+    }
+
+    .list img {
+        padding: 24px;
+        width: 250px;
+        height: 150px;
+        border: 3px solid var(--color-white);
+        border-radius: 12px;
+    }
+}
