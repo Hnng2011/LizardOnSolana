@@ -1,7 +1,17 @@
 window.addEventListener('load', (event) => {
     animator();
     setInterval(createRandomText, 3000);
+
+    const backgroundImages = document.querySelectorAll('.background_imgage');
+    backgroundImages.forEach(function (image) {
+        moveElementRandomly(image);
+        console.log(image);
+        setInterval(function () {
+            moveElementRandomly(image);
+        }, 10000);
+    });
 });
+
 
 function updateImageSources(count) {
     const maskedImages = document.querySelectorAll('.masked_imgage');
@@ -60,9 +70,8 @@ function createRandomText() {
     const logoHeaderRect = logoHeader.getBoundingClientRect();
     const buttonHeaderRect = buttonHeader.getBoundingClientRect();
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 3; i++) {
         const existingTexts = document.querySelectorAll('.animated_text');
-        console.log(existingTexts);
         const randomText = document.createElement('div');
         randomText.classList.add('animated_text');
         randomText.textContent = textArray[getRandomValue(0, textArray.length - 1)];
@@ -112,6 +121,15 @@ function createRandomText() {
             animationContainer.removeChild(randomText);
         });
     }
+}
+
+
+function moveElementRandomly(element) {
+    const topValue = getRandomValue(0, 90) + '%';
+    const leftValue = getRandomValue(0, 100) + '%';
+
+    element.style.top = topValue;
+    element.style.left = leftValue;
 }
 
 
