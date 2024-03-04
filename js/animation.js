@@ -49,7 +49,7 @@ function animator() {
     window.addEventListener('scroll', function () {
         const networkHero = document.querySelector('.network_hero');
         if (isElementInViewport(networkHero)) {
-            networkHero.querySelectorAll('h1, h2,.list img').forEach(element => {
+            networkHero.querySelectorAll('h2, h3,.list img').forEach(element => {
                 element.classList.add('active');
             });
             window.removeEventListener('scroll', this);
