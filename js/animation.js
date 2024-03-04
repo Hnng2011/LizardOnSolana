@@ -159,6 +159,14 @@ function moveElementRandomly(element) {
     element.style.left = leftValue;
 }
 
+function scrollContainer(direction) {
+    const scrollContainer = document.querySelector('.roadmap_list');
+    if (direction === 'left') {
+        scrollContainer.scrollLeft -= 300;
+    } else if (direction === 'right') {
+        scrollContainer.scrollLeft += 300;
+    }
+}
 
 
 
