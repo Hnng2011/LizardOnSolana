@@ -317,14 +317,32 @@ header {
     position: relative;
 }
 
-.roadmap_hero .container {
-    padding-top: 24px;
+.roadmap_head {
+    font-family: 'MemeFont', 'Noto Sans KR', sans-serif;
+    stroke-dasharray: 500;
+    stroke: var(--color-black);
+    fill: var(--color-secondary);
 }
 
-.roadmap_hero h2 {
-    font-family: 'MemeFont', 'Noto Sans KR', sans-serif;
-    font-size: 5rem;
-    color: var(--color-black);
+.roadmap_head.active {
+    stroke-width: 3;
+
+    animation: writeBase 6s ease-in-out;
+}
+
+@keyframes writeBase {
+    0% {
+
+        stroke-dashoffset: 500;
+    }
+
+    80% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.roadmap_hero .container {
+    padding-top: 24px;
 }
 
 .roadmap_list {
@@ -340,7 +358,6 @@ header {
     display: none;
 }
 
-
 .roadmap_item {
     background: var(--color-black);
     width: 400px;
@@ -348,6 +365,26 @@ header {
     text-align: start;
     padding: 12px;
     overflow: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.roadmap_item.active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.roadmap_item:nth-child(2).active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: 0.5s ease-in-out 0.2s;
+}
+
+.roadmap_item:nth-child(3).active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: 0.5s ease-in-out 0.4s;
 }
 
 .roadmap_item h3 {

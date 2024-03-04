@@ -42,19 +42,46 @@ function animator() {
         button.classList.add('active');
     });
 
+    const networkHero = document.querySelector('.network_hero');
+    if (isElementInViewport(networkHero)) {
+        networkHero.querySelectorAll('h2, h3,.list img').forEach(element => {
+            element.classList.add('active');
+        });
+        window.removeEventListener('scroll', this);
+    }
+    else {
+        window.addEventListener('scroll', function () {
+            if (isElementInViewport(networkHero)) {
+                networkHero.querySelectorAll('h2, h3,.list img').forEach(element => {
+                    element.classList.add('active');
+                });
+                window.removeEventListener('scroll', this);
+            }
+        });
+    };
+
+    const roadmapHero = document.querySelector('.roadmap_hero');
+    if (isElementInViewport(roadmapHero)) {
+        roadmapHero.querySelectorAll('.roadmap_item , .roadmap_head').forEach(element => {
+            element.classList.add('active');
+        });
+        window.removeEventListener('scroll', this);
+    }
+    else {
+        window.addEventListener('scroll', function () {
+
+            if (isElementInViewport(roadmapHero)) {
+                networkHero.querySelectorAll('roadmap_head, roadmap_item').forEach(element => {
+                    element.classList.add('active');
+                });
+                window.removeEventListener('scroll', this);
+            }
+        });
+    };
+
     setInterval(() => {
         count = updateImageSources(count);
     }, 1000);
-
-    window.addEventListener('scroll', function () {
-        const networkHero = document.querySelector('.network_hero');
-        if (isElementInViewport(networkHero)) {
-            networkHero.querySelectorAll('h2, h3,.list img').forEach(element => {
-                element.classList.add('active');
-            });
-            window.removeEventListener('scroll', this);
-        }
-    });
 }
 
 function getRandomValue(min, max) {
