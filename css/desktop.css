@@ -316,9 +316,8 @@ header {
 .roadmap_hero {
     min-height: 400px;
     width: 100%;
-    height: 100vh;
     margin: auto;
-    text-align: center;
+    text-align: left;
     position: relative;
 }
 
@@ -331,7 +330,6 @@ header {
 
 .roadmap_head.active {
     stroke-width: 3;
-
     animation: writeBase 6s ease-in-out;
 }
 
@@ -347,7 +345,7 @@ header {
 }
 
 .roadmap_hero .container {
-    padding-top: 24px;
+    padding: 24px 0 96px 0;
 }
 
 .roadmap_list {
@@ -444,4 +442,135 @@ header {
     width: 350px;
     position: relative;
     transform: translateY(16px);
+}
+
+.tokennomics_hero {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-black);
+    font-family: 'Memefont', 'Noto Sans KR', sans-serif;
+}
+
+.tokennomics_hero .container {
+    padding: 24px 0 24px 0;
+    height: fit-content;
+}
+
+.tokennomics_hero h2 {
+    text-align: right;
+    font-size: 5rem;
+    color: var(--color-secondary);
+}
+
+.tokenomics_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.tokenomics_item {
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+    gap: 12px;
+    font-size: 1.5rem;
+}
+
+.tokenomics_item p {
+    color: var(--color-main);
+}
+
+.chart {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-top: 5%;
+}
+
+.chart_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    color: var(--color-white);
+    padding-bottom: 12px;
+}
+
+.chart_item:hover {
+    transform: scale(1.1);
+    background-color: rgba(128, 128, 128, 0.507);
+    backdrop-filter: blur(10px);
+}
+
+.chart_item .chart_color {
+    width: 100%;
+    height: 50px;
+    border: 2px solid var(--color-white);
+}
+
+.chart_item:nth-child(1) {
+    width: 40%;
+}
+
+.chart_item:nth-child(1) .chart_color {
+    background-color: red;
+}
+
+.chart_item:nth-child(2) {
+    width: 13%;
+}
+
+.chart_item:nth-child(2) .chart_color {
+    background-color: green;
+}
+
+.chart_item:nth-child(3) {
+    width: 12%;
+}
+
+.chart_item:nth-child(3) .chart_color {
+    background-color: yellow;
+}
+
+.chart_item:nth-child(4) {
+    width: 11%;
+}
+
+.chart_item:nth-child(4) .chart_color {
+    background-color: pink;
+}
+
+.chart_item:nth-child(5) {
+    width: 10%;
+}
+
+.chart_item:nth-child(5) .chart_color {
+    background-color: purple;
+}
+
+.chart_item:nth-child(6) {
+    width: 9%;
+}
+
+.chart_item:nth-child(6) .chart_color {
+    background-color: paleturquoise;
+}
+
+.chart_item:nth-child(7) {
+    width: 8%;
+}
+
+.chart_item:nth-child(7) .chart_color {
+    background-color: orange;
+}
+
+.chart_item:nth-child(8) {
+    width: 7%;
+}
+
+.chart_item:nth-child(8) .chart_color {
+    background-color: lightgreen;
 }

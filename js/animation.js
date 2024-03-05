@@ -47,7 +47,6 @@ function animator() {
         networkHero.querySelectorAll('h2, h3,.list img').forEach(element => {
             element.classList.add('active');
         });
-        window.removeEventListener('scroll', this);
     }
     else {
         window.addEventListener('scroll', function () {
@@ -55,7 +54,6 @@ function animator() {
                 networkHero.querySelectorAll('h2, h3,.list img').forEach(element => {
                     element.classList.add('active');
                 });
-                window.removeEventListener('scroll', this);
             }
         });
     };
@@ -65,16 +63,13 @@ function animator() {
         roadmapHero.querySelectorAll('.roadmap_item , .roadmap_head').forEach(element => {
             element.classList.add('active');
         });
-        window.removeEventListener('scroll', this);
     }
     else {
         window.addEventListener('scroll', function () {
-
             if (isElementInViewport(roadmapHero)) {
-                networkHero.querySelectorAll('roadmap_head, roadmap_item').forEach(element => {
+                roadmapHero.querySelectorAll('.roadmap_head, .roadmap_item').forEach(element => {
                     element.classList.add('active');
                 });
-                window.removeEventListener('scroll', this);
             }
         });
     };
@@ -161,15 +156,21 @@ function moveElementRandomly(element) {
 
 function scrollContainer(direction) {
     const scrollContainer = document.querySelector('.roadmap_list');
-    if (direction === 'left') {
+    const leftButton = document.querySelectorAll('.button_scroll_roadmap button')[0];
+    const rightButton = document.querySelectorAll('.button_scroll_roadmap button')[1];
+
+    if (direction === 'left' && scrollContainer.scrollLeft > 0) {
         scrollContainer.scrollLeft -= 300;
-    } else if (direction === 'right') {
+        rightButton.style.opacity = '1';
+        rightButton.style.pointerEvents = 'auto';
+        leftButton.style.opacity = '0';
+        leftButton.style.pointerEvents = 'none';
+    } else if (direction === 'right' && scrollContainer.scrollLeft + scrollContainer.clientWidth < scrollContainer.scrollWidth) {
         scrollContainer.scrollLeft += 300;
+        leftButton.style.opacity = '1';
+        leftButton.style.pointerEvents = 'auto';
+        rightButton.style.opacity = '0';
+        rightButton.style.pointerEvents = 'none';
     }
 }
-
-
-
-
-
 
