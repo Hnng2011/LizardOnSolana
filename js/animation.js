@@ -13,17 +13,6 @@ window.addEventListener('load', (event) => {
 });
 
 
-function updateImageSources(count) {
-    const maskedImages = document.querySelectorAll('.masked_imgage');
-
-    maskedImages.forEach((masked, index) => {
-        const newSrc = index === 0 ? `./assets/images/NFT/${count}.png` : `./assets/images/NFT/${89 - count}.png`;
-        masked.src = newSrc;
-    });
-
-    return count === 89 ? 0 : count + 1;
-}
-
 function isElementInViewport(el) {
     var rect = el.getBoundingClientRect();
     var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
@@ -37,7 +26,6 @@ function animator() {
     let count = 0;
     const mainHeading = document.querySelector('.main_header');
     mainHeading.querySelector('.header_logo').classList.add('active');
-    mainHeading.querySelector('.header_describe').classList.add('active');
     mainHeading.querySelectorAll('.header_function button').forEach((button, index) => {
         button.classList.add('active');
     });
@@ -121,10 +109,6 @@ function animator() {
             }
         });
     };
-
-    setInterval(() => {
-        count = updateImageSources(count);
-    }, 1000);
 }
 
 function getRandomValue(min, max) {

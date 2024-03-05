@@ -33,6 +33,7 @@ header {
     animation: popUpAnimation 7s ease-out;
     pointer-events: none;
     text-shadow: 0px 0px 6px var(--color-black);
+    opacity: 0.6;
 }
 
 @keyframes popUpAnimation {
@@ -142,6 +143,7 @@ header {
     mask-image: url('../assets/images/background/paint1.svg');
     top: 2%;
     left: 0;
+    transform: scaleX(-1);
 }
 
 .masked_imgage:nth-child(2) {
@@ -431,7 +433,7 @@ header {
 }
 
 .roadmap_item ol {
-    font-family: 'MemeFont', 'Noto Sans KR', sans-serif;
+    font-family: 'MemeFont2', 'Noto Sans KR', sans-serif;
     padding: 5% 0 0 5%;
     color: var(--color-white);
     text-decoration: none;
@@ -483,6 +485,7 @@ header {
     font-size: 1.5rem;
     transition: 0.5s ease-in-out;
     transform: translateX(-100%);
+    font-family: 'MemeFont2', 'Noto Sans KR', sans-serif;
 }
 
 .tokenomics_item:nth-child(2) {
@@ -509,6 +512,10 @@ header {
     transition: 0.5s ease-in-out 0.6s;
 }
 
+.tokenomics_item:nth-child(8) {
+    transition: 0.5s ease-in-out 0.7s;
+}
+
 .tokenomics_item.active {
     transform: translateX(0%);
 }
@@ -524,6 +531,7 @@ header {
     justify-content: start;
     align-items: start;
     margin-top: 5%;
+    font-family: 'MemeFont2', 'Noto Sans KR', sans-serif;
 }
 
 .chart_item {
@@ -657,6 +665,7 @@ header {
 .about_content p {
     transform: scaleX(0);
     transition: 0.5s ease-in-out 0.4s;
+    font-family: 'MemeFont2', 'Noto Sans KR', sans-serif;
 }
 
 .about_content h2.active {

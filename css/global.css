@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'MemeFont2';
+    src: url('../assets/fonts/fugaz-one-latin-400-normal.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --color-main: aqua;
     --color-secondary: pink;
