@@ -74,6 +74,54 @@ function animator() {
         });
     };
 
+    const aboutHero = document.querySelector('.about_hero');
+    if (isElementInViewport(aboutHero)) {
+        aboutHero.querySelectorAll('p , h2 , img').forEach(element => {
+            element.classList.add('active');
+        });
+    }
+    else {
+        window.addEventListener('scroll', function () {
+            if (isElementInViewport(aboutHero)) {
+                aboutHero.querySelectorAll('p , h2 , img').forEach(element => {
+                    element.classList.add('active');
+                });
+            }
+        });
+    };
+
+    const tokennomicsHero = document.querySelector('.tokennomics_hero');
+    if (isElementInViewport(tokennomicsHero)) {
+        tokennomicsHero.querySelectorAll('h2 , .tokenomics_item , .chart_item').forEach(element => {
+            element.classList.add('active');
+        });
+    }
+    else {
+        window.addEventListener('scroll', function () {
+            if (isElementInViewport(tokennomicsHero)) {
+                tokennomicsHero.querySelectorAll('h2 , .tokenomics_item , .chart_item').forEach(element => {
+                    element.classList.add('active');
+                });
+            }
+        });
+    };
+
+    const socialHero = document.querySelector('.social_hero');
+    if (isElementInViewport(socialHero)) {
+        socialHero.querySelectorAll('h2 , h3 , button , img').forEach(element => {
+            element.classList.add('active');
+        });
+    }
+    else {
+        window.addEventListener('scroll', function () {
+            if (isElementInViewport(socialHero)) {
+                socialHero.querySelectorAll('h2 , h3 , button , img').forEach(element => {
+                    element.classList.add('active');
+                });
+            }
+        });
+    };
+
     setInterval(() => {
         count = updateImageSources(count);
     }, 1000);

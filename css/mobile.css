@@ -54,6 +54,10 @@
         border-radius: 12px;
     }
 
+    .roadmap_hero {
+        height: fit-content;
+    }
+
     .roadmap_head {
         font-size: 1rem;
         margin-left: 12px;
