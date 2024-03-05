@@ -590,6 +590,7 @@ header {
 .about_hero .about_image img {
     width: 70%;
     aspect-ratio: 1/1;
+    transform: scaleX(-1);
 }
 
 .about_content {
