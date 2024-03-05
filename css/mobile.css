@@ -33,11 +33,11 @@
         right: -50%;
     }
 
-    .network_hero h1 {
+    .network_hero h2 {
         font-size: 3rem;
     }
 
-    .network_hero h2 {
+    .network_hero h3 {
         font-size: 1rem;
     }
 
@@ -54,6 +54,11 @@
         border-radius: 12px;
     }
 
+    .roadmap_head {
+        font-size: 1rem;
+        margin-left: 12px;
+    }
+
     .roadmap_list {
         flex-direction: column;
         align-items: center;
@@ -62,5 +67,85 @@
     .roadmap_item {
         width: 80%;
         margin: 16px 0;
+    }
+
+    .tokennomics_hero h2 {
+        font-size: 4rem;
+        padding-right: 12px;
+    }
+
+    .tokenomics_item {
+        font-size: 0.8rem;
+        padding-left: 12px;
+    }
+
+
+    .chart {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .chart_item p {
+        font-size: 0.8rem;
+    }
+
+    .chart_item:nth-child(1) {
+        width: 60%;
+    }
+
+    .chart_item:nth-child(2) {
+        width: 30%;
+    }
+
+    .chart_item:nth-child(3) {
+        width: 28%;
+    }
+
+    .chart_item:nth-child(4) {
+        width: 26%;
+    }
+
+    .chart_item:nth-child(5) {
+        width: 24%;
+    }
+
+    .chart_item:nth-child(6) {
+        width: 22%;
+    }
+
+    .chart_item:nth-child(7) {
+        width: 20%;
+    }
+
+    .chart_item:nth-child(8) {
+        width: 18%;
+    }
+
+
+    .about_hero .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about_hero .about_image img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        padding: 12px;
+    }
+
+    .about_content {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .about_content h2 {
+        color: var(--color-white);
+        font-size: 2rem;
+    }
+
+    .about_content p {
+        font-size: 1rem;
     }
 }
