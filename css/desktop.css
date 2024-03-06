@@ -1,6 +1,6 @@
 .container {
     height: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -47,15 +47,26 @@ header {
 }
 
 .main_header {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     height: 100%;
     gap: 2%;
     font-family: 'MemeFont', 'Noto Sans KR', sans-serif;
     transition: 0.5s ease-in-out;
     overflow: hidden;
+}
+
+.image_header {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 900px;
+    aspect-ratio: 1/1;
+    z-index: -1;
+    transform: scaleX(-1) translateX(10%);
 }
 
 .main_header .header_logo {
@@ -78,7 +89,7 @@ header {
 
 .header_function {
     width: 100%;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     display: flex;
     gap: 1%;
@@ -455,15 +466,17 @@ header {
     background-color: var(--color-black);
     font-family: 'Memefont', 'Noto Sans KR', sans-serif;
     overflow: hidden;
+    height: 90vh;
+    position: relative;
 }
 
 .tokennomics_hero .container {
-    padding: 24px 0 24px 0;
+    padding: 48px 0 48px 0;
     height: fit-content;
 }
 
 .tokennomics_hero h2 {
-    text-align: right;
+    text-align: center;
     font-size: 5rem;
     color: var(--color-secondary);
     transform: translateX(100%);
@@ -472,6 +485,22 @@ header {
 
 .tokennomics_hero h2.active {
     transform: translateX(0%);
+}
+
+.tokenomics_list_all {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.tokenomics_list_all img {
+    position: absolute;
+    left: 33%;
+    bottom: 0;
+    width: 500px;
+    aspect-ratio: 1/1;
 }
 
 .tokenomics_list {
@@ -485,10 +514,16 @@ header {
     align-items: center;
     margin: 12px 0;
     gap: 12px;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    opacity: 0;
     transition: 0.5s ease-in-out;
     transform: translateX(-100%);
     font-family: 'MemeFont2', 'Noto Sans KR', sans-serif;
+}
+
+.img_token {
+    width: 100%;
+    aspect-ratio: 4/3;
 }
 
 .tokenomics_item:nth-child(2) {
@@ -521,6 +556,7 @@ header {
 
 .tokenomics_item.active {
     transform: translateX(0%);
+    opacity: 1;
 }
 
 
@@ -528,105 +564,15 @@ header {
     color: var(--color-main);
 }
 
-.chart {
-    width: 100%;
+.tokenomics_chart {
     display: flex;
-    justify-content: start;
-    align-items: start;
-    margin-top: 5%;
-    font-family: 'MemeFont2', 'Noto Sans KR', sans-serif;
+    justify-content: space-between;
+    margin-top: 12px;
 }
 
-.chart_item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    text-align: center;
-    transition: 0.5s ease-in-out 1s;
-    color: var(--color-white);
-    padding-bottom: 12px;
-    transform: scaleX(0);
-}
-
-.chart_item.active {
-    transform: scaleX(1);
-}
-
-.chart_item:hover {
-    transform: scale(1.1);
-    background-color: rgba(128, 128, 128, 0.507);
-    backdrop-filter: blur(10px);
-}
-
-.chart_item .chart_color {
-    width: 100%;
-    height: 50px;
-    border: 2px solid var(--color-white);
-}
-
-.chart_item:nth-child(1) {
-    width: 40%;
-}
-
-.chart_item:nth-child(1) .chart_color {
-    background-color: red;
-}
-
-.chart_item:nth-child(2) {
-    width: 13%;
-}
-
-.chart_item:nth-child(2) .chart_color {
-    background-color: green;
-}
-
-.chart_item:nth-child(3) {
-    width: 12%;
-}
-
-.chart_item:nth-child(3) .chart_color {
-    background-color: yellow;
-}
-
-.chart_item:nth-child(4) {
-    width: 11%;
-}
-
-.chart_item:nth-child(4) .chart_color {
-    background-color: pink;
-}
-
-.chart_item:nth-child(5) {
-    width: 10%;
-}
-
-.chart_item:nth-child(5) .chart_color {
-    background-color: purple;
-}
-
-.chart_item:nth-child(6) {
-    width: 9%;
-}
-
-.chart_item:nth-child(6) .chart_color {
-    background-color: paleturquoise;
-}
-
-.chart_item:nth-child(7) {
-    width: 8%;
-}
-
-.chart_item:nth-child(7) .chart_color {
-    background-color: orange;
-}
-
-.chart_item:nth-child(8) {
-    width: 7%;
-}
-
-.chart_item:nth-child(8) .chart_color {
-    background-color: lightgreen;
+.tokenomics_chart img {
+    width: 50%;
+    aspect-ratio: 1/1;
 }
 
 .about_hero {
@@ -644,18 +590,19 @@ header {
 }
 
 .about_hero .about_image img {
-    width: 70%;
+    width: 100%;
     aspect-ratio: 1/1;
-    transform: scaleX(-1) scale(0);
+    transform: scale(0);
     transition: 0.5s ease-in-out;
 }
 
 .about_hero .about_image img.active {
-    transform: scaleX(-1) scale(1);
+    transform: scale(1);
 }
 
 .about_content {
-    width: 100%;
+    flex-shrink: 0;
+    width: 30vw;
 }
 
 .about_content h2 {
