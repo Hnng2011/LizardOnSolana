@@ -1,6 +1,77 @@
 @media screen and (max-width: 700px) {
+    .main_header {
+        align-items: center;
+    }
+
+    .hamburger_menu {
+        height: 25px;
+        width: 35px;
+        position: fixed;
+        top: 2%;
+        right: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+
+    }
+
+    .navigation_bar.active {
+        transform: translateX(0);
+    }
+
+    .hamburger_menu div {
+        width: 35px;
+        height: 5px;
+        background-color: var(--color-secondary);
+        border-radius: 15px;
+        border: 2px solid var(--color-black);
+        box-sizing: border-box;
+        transition: 0.5s ease-in-out;
+    }
+
+    .hamburger_menu::before {
+        box-sizing: border-box;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 5px;
+        background-color: var(--color-secondary);
+        top: 0;
+        border-radius: 15px;
+        border: 2px solid var(--color-black);
+        transition: 0.5s ease-in-out;
+    }
+
+    .hamburger_menu::after {
+        box-sizing: border-box;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 5px;
+        background-color: var(--color-secondary);
+        bottom: 0;
+        border-radius: 15px;
+        border: 2px solid var(--color-black);
+        transition: 0.5s ease-in-out;
+    }
+
+    .navigation_bar {
+        top: 0;
+        height: 100vh;
+        width: 40%;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 24px;
+        border-radius: 12px 0 0 12px;
+        transform: translateX(100%);
+        transition: 0.5s ease-in-out;
+    }
+
     .main_header .header_logo {
-        font-size: 3rem;
+        font-size: 7rem;
         font-weight: 700;
     }
 
@@ -10,8 +81,14 @@
         color: black;
     }
 
+    .image_header {
+        opacity: 0.4;
+        filter: blur(5px);
+    }
+
     .header_function {
         gap: 4%;
+        justify-content: center;
     }
 
     .header_function button:nth-child(1) {
@@ -23,16 +100,30 @@
         width: 65vw;
     }
 
-
-
     .marquee {
-        left: -50%;
-        top: -30%;
+        font-size: 1rem;
+        width: 100vw;
+        overflow: hidden;
     }
 
-    .marquee_2 {
-        top: 95%;
-        right: -50%;
+    .marquee div {
+        gap: 36px;
+    }
+
+    .marquee div div {
+        width: 5vw;
+    }
+
+    @keyframes marquee {
+        100% {
+            transform: translateX(calc((-3 * 5vw) + (-3 * 36px)));
+        }
+    }
+
+
+    .network_hero {
+        overflow: hidden;
+        width: 100vw;
     }
 
     .network_hero h2 {
@@ -45,19 +136,20 @@
 
     .list {
         margin: 26px auto;
-
+        grid-template-columns: 1fr;
     }
 
     .list img {
         padding: 24px;
         width: 250px;
-        height: 150px;
+        height: 250px;
         border: 3px solid var(--color-white);
         border-radius: 12px;
     }
 
     .roadmap_hero {
         height: fit-content;
+        overflow: hidden;
     }
 
     .button_scroll_roadmap {
@@ -75,11 +167,17 @@
     }
 
     .roadmap_item {
-        width: 100%;
+        width: 90%;
     }
 
     .roadmap_item {
         transform: translateX(-100%);
+    }
+
+    .tokennomics_hero {
+        overflow: hidden;
+        width: 100vw;
+        height: fit-content;
     }
 
     .tokennomics_hero h2 {
@@ -93,51 +191,10 @@
         width: 100%;
     }
 
-
-    .chart {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .chart_item p {
-        font-size: 0.8rem;
-    }
-
-    .chart_item:nth-child(1) {
-        width: 60%;
-    }
-
-    .chart_item:nth-child(2) {
-        width: 30%;
-    }
-
-    .chart_item:nth-child(3) {
-        width: 28%;
-    }
-
-    .chart_item:nth-child(4) {
-        width: 26%;
-    }
-
-    .chart_item:nth-child(5) {
-        width: 24%;
-    }
-
-    .chart_item:nth-child(6) {
-        width: 22%;
-    }
-
-    .chart_item:nth-child(7) {
-        width: 20%;
-    }
-
-    .chart_item:nth-child(8) {
-        width: 18%;
-    }
-
     .about_hero {
+        width: 100vw;
         height: fit-content;
+        overflow: hidden;
     }
 
     .about_hero .container {
@@ -166,10 +223,33 @@
         font-size: 1rem;
     }
 
+    .social_hero {
+        width: 100vw;
+        overflow: hidden;
+    }
+
     .social_hero_img img {
         width: calc(100vw / 2);
         height: calc(100vw / 2);
         opacity: 0;
         transition: 0.5s ease-in-out 0.8s;
     }
+
+    .tokenomics_list_all {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tokenomics_list {
+        width: 100%;
+    }
+
+    .tokenomics_list_all img {
+        left: 0;
+        width: 100%;
+        opacity: 0.4;
+        filter: blur(5px);
+    }
+
+
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" as="font" href="./assets/fonts/PermanentMarker-Regular.ttf" crossorigin="anonymous">
     <link rel="preload" as="font" href="./assets/fonts/fugaz-one-latin-400-normal.ttf" crossorigin="anonymous">
-    <title>LOS - Lizard On Solana</title>
+    <title>Lizard</title>
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/desktop.css">
     <link rel="stylesheet" href="./css/mobile.css">
@@ -16,6 +16,19 @@
 </head>
 
 <body>
+    <div class="hamburger_menu" onclick="toggleActive()">
+        <div></div>
+    </div>
+    <div class="navigation_bar">
+        <video autoplay muted loop>
+            <source src="./assets/images/background/coin.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        <a href="#about">About</a>
+        <a href="#token">Tokenomics</a>
+        <a href="#roadmap">Roadmap</a>
+    </div>
+
     <header>
         <div class="animation_container" id="animationContainer"></div>
         <div class="animation_container no_2" id="animationContainer_2"></div>
@@ -33,7 +46,36 @@
         </div>
     </header>
 
-    <div class="about_hero">
+    <div class="marquee">
+        <div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+        </div>
+    </div>
+
+    <div class="about_hero" id="about">
         <div class="container">
             <div class="about_content">
                 <h2>What is $LIZA ?</h2>
@@ -49,11 +91,9 @@
         </div>
     </div>
 
-    <div class="tokennomics_hero">
+    <div class="tokennomics_hero" id="token">
         <div class="container">
             <h2>Tokenomics</h2>
-
-
             <div class="tokenomics_list_all">
                 <div class="tokenomics_list">
                     <div class="tokenomics_item">
@@ -96,15 +136,11 @@
 
                     <div class="tokenomics_item">
                         <h3> Presale: </h3>
-                        <p> 40% - 400,000,000 $LIZA - 1000 SOL</p>
+                        <p> 40% - 400,000,000 $LIZA</p>
                     </div>
                     <div class="tokenomics_item">
-                        <h3>Liquidity: </h3>
-                        <p> 6% - 60,000,000 $LIZA - 150 SOL</p>
-                    </div>
-                    <div class="tokenomics_item">
-                        <h3>Airdrop: </h3>
-                        <p> 35% - 350,000,000 $LIZA</p>
+                        <h3>LP + Airdrop: </h3>
+                        <p>41% 410,000,000 $LIZA</p>
                     </div>
                     <div class="tokenomics_item">
                         <h3>CEX Listing: </h3>
@@ -123,7 +159,7 @@
                         <p>2% - 20,000,000 $LIZA</p>
                     </div>
                     <div class="tokenomics_item">
-                        <h3>Investment: </h3>
+                        <h3>Partership: </h3>
                         <p> 1% - 10,000,000 $LIZA</p>
                     </div>
                 </div>
@@ -134,7 +170,7 @@
 
     <img alt="tokenomics" src="./assets/images/background/liza chart.png" class="img_token" />
 
-    <div class="roadmap_hero">
+    <div class="roadmap_hero" id="roadmap">
         <div class="container">
             <svg class="roadmap_head" height="100" width="350" xmlns="http://www.w3.org/2000/svg">
                 <text x="0" y="80" font-size="80">Roadmap</text>
@@ -149,64 +185,76 @@
                         Phase 1:
                     </h3>
                     <ol>
-                        <li>Research existing NFT standards.</li>
-                        <li>Outline technical specifications for NFFT.</li>
-                        <li>Draft a concise whitepaper.</li>
+                        <li>Build Socials.</li>
+                        <li>Bulid Website - Release.</li>
+                        <li>Whitepaper.</li>
+                        <li>Huge Marketing Push.</li>
+                        <li>Info NFT.</li>
                     </ol>
-                    <img alt="demo" src="./assets/images/background/3a.png" />
+                    <img alt="demo" src="./assets/images/background/1.png" />
                 </div>
                 <div class="roadmap_item">
                     <h3>
                         Phase 2:
                     </h3>
                     <ol>
-                        <li>Collaborate with developers for feedback</li>
-                        <li>Foster community support and outreach</li>
-                        <li>Address legal considerations and licensin</li>
+                        <li>Presale</li>
+                        <li>Launch On Raydium.</li>
+                        <li>Community Contest.</li>
+                        <li>SOL Trendings.</li>
+                        <li>Dexscreener & Dextools Update.</li>
                     </ol>
-                    <img alt="demo" src="./assets/images/background/3a.png" />
+                    <img alt="demo" src="./assets/images/background/2.png" />
                 </div>
                 <div class="roadmap_item">
                     <h3>
                         Phase 3:
                     </h3>
                     <ol>
-                        <li>Create a reference implementation</li>
-                        <li>Conduct security audits and address issues</li>
-                        <li> Plan and execute the mainnet launch</li>
+                        <li>NFT Staking.</li>
+                        <li>CMC & CG Listings.</li>
+                        <li>Ads On Multi-platform.</li>
+                        <li>Global Marketing Compaign.</li>
+                        <li>Reach 5,000 Holder.</li>
                     </ol>
-                    <img alt="demo" src="./assets/images/background/3a.png" />
+                    <img alt="demo" src="./assets/images/background/3.png" />
                 </div>
                 <div class="roadmap_item">
                     <h3>
                         Phase 4:
                     </h3>
                     <ol>
-                        <li>Create a reference implementation</li>
-                        <li>Conduct security audits and address issues</li>
-                        <li> Plan and execute the mainnet launch</li>
+                        <li>Airdrop Campaigns.</li>
+                        <li>AMAs To Share Vision.</li>
+                        <li>CEX Listing.</li>
+                        <li>Reach 10,000 Holder.</li>
+                        <li>Build Mini Game - Release.</li>
                     </ol>
-                    <img alt="demo" src="./assets/images/background/3a.png" />
+                    <img alt="demo" src="./assets/images/background/4.png" />
                 </div>
             </div>
         </div>
     </div>
 
+
+
     <div class="network_hero">
         <div class="network_hero_background">
-            <img alt="background" src="./assets/images/background/gecko.svg" class="background_imgage" />
-            <img alt="background" src="./assets/images/background/gecko.svg" class="background_imgage" />
-            <img alt="background" src="./assets/images/background/gecko2.svg" class="background_imgage" />
-            <img alt="background" src="./assets/images/background/gecko2.svg" class="background_imgage" />
+            <img alt="background" src="./assets/images/background/1.png" class="background_imgage" />
+            <img alt="background" src="./assets/images/background/2.png" class="background_imgage" />
+            <img alt="background" src="./assets/images/background/3.png" class="background_imgage" />
+            <img alt="background" src="./assets/images/background/4.png" class="background_imgage" />
 
         </div>
         <div class="container">
             <h2>Our Partner</h2>
-            <h3>LIZA$ is AVAILABLE on SOL</h3>
             <div class="list">
-                <img alt="solana" src="./assets/images/socials/solana.svg">
-                <img alt="mexc" src="./assets/images/socials/mexc.svg">
-                <img alt="htx" src="./assets/images/socials/htx.svg">
+                <img alt="ray" src="./assets/images/socials/1.ray.png">
+                <img alt="dexs" src="./assets/images/socials/2.dexs.png">
+                <img alt="dex" src="./assets/images/socials/3 dex..png">
+                <img alt="bird" src="./assets/images/socials/4.bird.png">
+                <img alt="cgk" src="./assets/images/socials/5 cgk.png">
+                <img alt="cmc" src="./assets/images/socials/6 cmc.png">
             </div>
             <h3>More Partners are on the way. </h3>
         </div>
@@ -227,6 +275,50 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var scrollLinks = document.querySelectorAll('.navigation_bar a');
+
+            scrollLinks.forEach(function (link) {
+                link.addEventListener('click', smoothScroll);
+            });
+
+            function smoothScroll(e) {
+                e.preventDefault();
+
+                var targetId = this.getAttribute('href').substring(1);
+                var targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+
+                var navigationBar = document.querySelector('.navigation_bar');
+                navigationBar.classList.remove('active');
+            }
+        });
+
+        function toggleActive() {
+            var navigationBar = document.querySelector('.navigation_bar');
+            var hamburgerMenu = document.querySelector('.hamburger_menu');
+            navigationBar.classList.add('active');
+
+            document.addEventListener('click', function (event) {
+                var isClickInsideNavigationBar = navigationBar.contains(event.target) || hamburgerMenu.contains(event.target);
+
+                if (!isClickInsideNavigationBar)
+                    navigationBar.classList.remove('active');
+
+            });
+        }
+
+
+    </script>
+
 </body>
 
 </html>
