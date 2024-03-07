@@ -24,17 +24,20 @@
             <source src="./assets/images/background/coin.webm" type="video/webm">
             Your browser does not support the video tag.
         </video>
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#token">Tokenomics</a>
         <a href="#roadmap">Roadmap</a>
+        <a href="#partner">Partner</a>
+        <a href="#social">Socials</a>
     </div>
 
-    <header>
+    <header id="home">
         <div class="animation_container" id="animationContainer"></div>
         <div class="animation_container no_2" id="animationContainer_2"></div>
         <div class="container">
             <div class="main_header">
-                <img class="image_header" src="./assets/images/Logo/logo trans.png" />
+                <img class="image_header" src="./assets/images/background/lg trans.png" />
                 <div class="header_logo">Lizard</div>
                 <div class="header_function">
                     <button>Buy $LIZA!!!</button>
@@ -159,7 +162,7 @@
                         <p>2% - 20,000,000 $LIZA</p>
                     </div>
                     <div class="tokenomics_item">
-                        <h3>Partership: </h3>
+                        <h3>Partnership: </h3>
                         <p> 1% - 10,000,000 $LIZA</p>
                     </div>
                 </div>
@@ -189,7 +192,7 @@
                         <li>Bulid Website - Release.</li>
                         <li>Whitepaper.</li>
                         <li>Huge Marketing Push.</li>
-                        <li>Info NFT.</li>
+                        <li>INO NFT.</li>
                     </ol>
                     <img alt="demo" src="./assets/images/background/1.png" />
                 </div>
@@ -236,15 +239,12 @@
         </div>
     </div>
 
-
-
-    <div class="network_hero">
+    <div class="network_hero" id="partner">
         <div class="network_hero_background">
             <img alt="background" src="./assets/images/background/1.png" class="background_imgage" />
             <img alt="background" src="./assets/images/background/2.png" class="background_imgage" />
             <img alt="background" src="./assets/images/background/3.png" class="background_imgage" />
             <img alt="background" src="./assets/images/background/4.png" class="background_imgage" />
-
         </div>
         <div class="container">
             <h2>Our Partner</h2>
@@ -255,12 +255,18 @@
                 <img alt="bird" src="./assets/images/socials/4.bird.png">
                 <img alt="cgk" src="./assets/images/socials/5 cgk.png">
                 <img alt="cmc" src="./assets/images/socials/6 cmc.png">
+                <img alt="ray" src="./assets/images/socials/1.ray.png">
+                <img alt="dexs" src="./assets/images/socials/2.dexs.png">
+                <img alt="dex" src="./assets/images/socials/3 dex..png">
+                <img alt="bird" src="./assets/images/socials/4.bird.png">
+                <img alt="cgk" src="./assets/images/socials/5 cgk.png">
+                <img alt="cmc" src="./assets/images/socials/6 cmc.png">
             </div>
-            <h3>More Partners are on the way. </h3>
+            <h3>More Partners are on the way.</h3>
         </div>
     </div>
 
-    <div class="social_hero">
+    <div class="social_hero" id="social">
         <div class="container">
             <h2>Socials</h2>
             <h3>Join the $LIZA social now </h3>
@@ -277,6 +283,7 @@
     </div>
 
     <script>
+
         document.addEventListener('DOMContentLoaded', function () {
             var scrollLinks = document.querySelectorAll('.navigation_bar a');
 
@@ -298,24 +305,36 @@
                 }
 
                 var navigationBar = document.querySelector('.navigation_bar');
+                var hamburgerMenu = document.querySelector('.hamburger_menu');
                 navigationBar.classList.remove('active');
+                hamburgerMenu.classList.remove('active');
             }
         });
 
         function toggleActive() {
             var navigationBar = document.querySelector('.navigation_bar');
             var hamburgerMenu = document.querySelector('.hamburger_menu');
-            navigationBar.classList.add('active');
+            hamburgerMenu.classList.toggle('active');
+            navigationBar.classList.toggle('active');
 
             document.addEventListener('click', function (event) {
                 var isClickInsideNavigationBar = navigationBar.contains(event.target) || hamburgerMenu.contains(event.target);
 
-                if (!isClickInsideNavigationBar)
+                if (!isClickInsideNavigationBar) {
                     navigationBar.classList.remove('active');
-
+                    hamburgerMenu.classList.remove('active');
+                }
             });
-        }
+        };
 
+        var navigationBar = document.querySelector('.navigation_bar');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 80) {
+                navigationBar.classList.add('scrolling');
+            } else {
+                navigationBar.classList.remove('scrolling');
+            }
+        });
 
     </script>
 

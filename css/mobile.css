@@ -13,8 +13,8 @@
         align-items: center;
         justify-content: center;
         z-index: 99;
-
     }
+
 
     .navigation_bar.active {
         transform: translateX(0);
@@ -56,18 +56,60 @@
         transition: 0.5s ease-in-out;
     }
 
+
+    .hamburger_menu.active div {
+        width: 0;
+        background-color: 0;
+        border: none;
+    }
+
+    .hamburger_menu.active::after {
+        top: 50%;
+        transform: rotate(45deg);
+    }
+
+    .hamburger_menu.active::before {
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+
+
     .navigation_bar {
         top: 0;
+        right: 0;
         height: 100vh;
         width: 40%;
-        right: 0;
         flex-direction: column;
         align-items: center;
         justify-content: start;
         gap: 24px;
         border-radius: 12px 0 0 12px;
-        transform: translateX(100%);
+        transform: translateX(-100%);
         transition: 0.5s ease-in-out;
+        background-color: rgba(255, 192, 203, 0.8);
+    }
+
+    .navigation_bar .hamburger_menu {
+        position: relative;
+        transform: translateX(50px);
+    }
+
+    .navigation_bar .hamburger_menu div {
+        width: 0;
+        background-color: 0;
+        border: none;
+    }
+
+    .navigation_bar .hamburger_menu::after {
+        top: 50%;
+        left: 50%;
+        transform: rotate(45deg);
+    }
+
+    .navigation_bar .hamburger_menu::before {
+        top: 50%;
+        left: 50%;
+        transform: rotate(-45deg);
     }
 
     .main_header .header_logo {
@@ -141,10 +183,17 @@
 
     .list img {
         padding: 24px;
-        width: 250px;
-        height: 250px;
+        width: 100px;
+        height: 100px;
         border: 3px solid var(--color-white);
         border-radius: 12px;
+        animation: marquee_partner 15s linear infinite;
+    }
+
+    @keyframes marquee_partner {
+        100% {
+            transform: translateX(calc(-6 * 112px));
+        }
     }
 
     .roadmap_hero {
@@ -157,8 +206,12 @@
     }
 
     .roadmap_head {
-        font-size: 1rem;
-        margin-left: 12px;
+        margin-left: 10vw;
+    }
+
+    .roadmap_head text {
+        text-align: center;
+        font-size: 4rem;
     }
 
     .roadmap_list {
@@ -185,10 +238,16 @@
         padding-right: 12px;
     }
 
+    .tokennomics_hero p {
+        opacity: 0.8;
+        color: rgb(0, 133, 133);
+    }
+
     .tokenomics_item {
         font-size: 0.7rem;
         padding: 0 12px;
         width: 100%;
+        flex-wrap: wrap;
     }
 
     .about_hero {
@@ -238,6 +297,7 @@
     .tokenomics_list_all {
         flex-direction: column;
         align-items: center;
+        gap: 24px;
     }
 
     .tokenomics_list {
@@ -251,5 +311,15 @@
         filter: blur(5px);
     }
 
+    .tokenomics_list {
+        z-index: 2;
+        border-radius: 10px;
+        background-color: var(--color-secondary);
+        backdrop-filter: none;
+        width: 90%;
+    }
 
+    .tokenomics_list h3 {
+        color: var(--color-black);
+    }
 }
