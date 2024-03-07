@@ -79,7 +79,7 @@ function animator() {
 
     const tokennomicsHero = document.querySelector('.tokennomics_hero');
     if (isElementInViewport(tokennomicsHero)) {
-        tokennomicsHero.querySelectorAll('h2 , .tokenomics_item , .chart_item').forEach(element => {
+        tokennomicsHero.querySelectorAll('h2 , .tokenomics_item , .chart_item , .roadmap_head').forEach(element => {
             element.classList.add('active');
         });
     }

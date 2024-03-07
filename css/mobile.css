@@ -215,17 +215,22 @@
         overflow: hidden;
     }
 
+    .roadmap_head {
+        height: 100px;
+        width: 100vw;
+    }
+
+    .roadmap_head.token {
+        width: 100vw;
+    }
+
+
     .button_scroll_roadmap {
         display: none;
     }
 
-    .roadmap_head {
-        margin-left: 10vw;
-    }
-
     .roadmap_head text {
-        text-align: center;
-        font-size: 4rem;
+        font-size: 4rem !important;
     }
 
     .roadmap_list {
