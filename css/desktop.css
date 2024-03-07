@@ -16,7 +16,7 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     display: flex;
-    justify-content: start;
+    justify-content: end;
     align-items: center;
     gap: 36px;
     top: 0%;
