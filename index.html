@@ -20,7 +20,7 @@
         <div></div>
     </div>
     <div class="navigation_bar">
-        <video autoplay muted loop>
+        <video autoplay muted loop id="video">
             <source src="./assets/images/background/coin.webm" type="video/webm">
             Your browser does not support the video tag.
         </video>
@@ -272,15 +272,13 @@
     <div class="social_hero" id="social">
         <div class="container">
             <h2>Socials</h2>
-            <h3>Join the $LIZA social now </h3>
+            <h3>Join With Lizard Family</h3>
             <div class="social_hero_function">
                 <button><img alt="twitter" src="./assets/images/socials/twitter.svg" /></button>
                 <button><img alt="telegram" src="./assets/images/socials/telegram.svg" /></button>
             </div>
             <div class="social_hero_img">
-                <img alt="twitter" src="./assets/images/background/5a.png" />
-
-                <img alt="telegram" src="./assets/images/background/6a.png" />
+                <img alt="social" src="./assets/images/background/social.jpg" />
             </div>
         </div>
     </div>
@@ -338,6 +336,12 @@
                 navigationBar.classList.remove('scrolling');
             }
         });
+
+
+        function playVideo() {
+            var video = document.getElementById('video');
+            video.play();
+        }
 
     </script>
 

@@ -2,10 +2,15 @@
     height: 100%;
     max-width: 1300px;
     margin: 0 auto;
+    padding: 24px;
 }
 
 .hamburger_menu {
     display: none;
+}
+
+video {
+    pointer-events: none;
 }
 
 .navigation_bar {
@@ -80,7 +85,7 @@ header {
 .image_header {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -24px;
     height: 70vh;
     aspect-ratio: 1/1;
     z-index: -1;
@@ -152,16 +157,17 @@ header {
     align-items: center;
     display: flex;
     gap: 1%;
+
 }
 
 .header_function button {
     width: 50px;
     height: 50px;
     padding: 12px;
-
     background-color: var(--color-white);
     border-radius: 12px;
     border: 2px solid var(--color-black);
+    color: var(--color-black);
 }
 
 .header_function button:nth-child(1) {
@@ -274,7 +280,7 @@ header {
     background-color: var(--color-black);
     font-family: 'Memefont', 'Noto Sans KR', sans-serif;
     width: 100%;
-    min-height: 400px;
+    min-height: 100vh;
     margin: 0 auto;
     text-align: center;
     padding: 36px;
@@ -383,7 +389,7 @@ header {
 .roadmap_hero {
     min-height: 400px;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin: auto;
     text-align: left;
     position: relative;
@@ -421,10 +427,6 @@ header {
     80% {
         stroke-dashoffset: 0;
     }
-}
-
-.roadmap_hero .container {
-    padding: 24px 0 96px 0;
 }
 
 .roadmap_list {
@@ -539,16 +541,15 @@ header {
 }
 
 .tokennomics_hero {
-    width: 100%;
+    width: 100vw;
     background-color: var(--color-black);
     font-family: 'Memefont', 'Noto Sans KR', sans-serif;
     overflow: hidden;
-    height: 90vh;
+    min-height: 90vh;
     position: relative;
 }
 
 .tokennomics_hero .container {
-    padding: 48px 0 48px 0;
     height: fit-content;
 }
 
@@ -654,14 +655,13 @@ header {
 }
 
 .about_hero {
-    width: 100%;
-    height: 100vh;
-    padding: 24px 0 24px 0;
+    width: 100vw;
+    min-height: 100vh;
     font-family: 'Memefont', 'Noto Sans KR', sans-serif;
 }
 
 .about_hero .container {
-    padding: 24px 0 24px 0;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -717,7 +717,7 @@ header {
 
 .social_hero {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .social_hero .container {
@@ -726,6 +726,7 @@ header {
     justify-content: center;
     align-items: center;
     font-family: 'Memefont', 'Noto Sans KR', sans-serif;
+    padding-bottom: 0;
 }
 
 .social_hero h2 {
@@ -797,23 +798,23 @@ header {
 }
 
 .social_hero_img img {
-    width: 400px;
-    height: 400px;
+    width: 100vw;
     opacity: 0;
     transition: 0.5s ease-in-out 0.8s;
+    aspect-ratio: 4/3;
 }
 
 .social_hero_img img.active {
     opacity: 1;
 }
 
-
-.social_hero_img img:nth-child(1) {
-    transform: scaleX(-1);
-}
-
-
 @media screen and (max-width: 1900px) {
+
+    .header_logo {
+        font-size: 8rem !important;
+    }
+
+
     .about_image {
         width: 40vw;
     }
@@ -821,6 +822,10 @@ header {
     .roadmap_head.token {
         width: 100vw;
         height: 150px;
+    }
+
+    .header_function button {
+        font-size: 1rem !important;
     }
 
     .roadmap_head {
@@ -861,4 +866,17 @@ header {
         /* transform: translateX(-20%); */
     }
 
+    .marquee div {
+        gap: 72px;
+    }
+
+    .marquee div div {
+        width: 5vw;
+    }
+
+    @keyframes marquee {
+        100% {
+            transform: translateX(calc((-3 * 5vw) + (-3 * 72px)));
+        }
+    }
 }
