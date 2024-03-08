@@ -431,7 +431,6 @@ header {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin-top: 62px;
     gap: 12px;
     overflow-x: scroll;
     overscroll-behavior-inline: contain;
@@ -579,6 +578,7 @@ header {
     bottom: 0;
     width: 500px;
     aspect-ratio: 1/1;
+    z-index: 0;
 }
 
 .tokenomics_list {
@@ -810,4 +810,55 @@ header {
 
 .social_hero_img img:nth-child(1) {
     transform: scaleX(-1);
+}
+
+
+@media screen and (max-width: 1900px) {
+    .about_image {
+        width: 40vw;
+    }
+
+    .roadmap_head.token {
+        width: 100vw;
+        height: 150px;
+    }
+
+    .roadmap_head {
+        width: 100vw;
+        height: 150px;
+    }
+
+    .roadmap_list {
+        margin: 0 auto;
+        width: 70vw;
+        gap: 12px;
+        overflow-x: hidden;
+    }
+
+    .roadmap_item {
+        width: 300px;
+        height: fit-content;
+        font-size: 0.8rem;
+    }
+
+    .button_scroll_roadmap {
+        padding: 0 24px;
+        width: 100vw;
+        justify-content: space-between;
+        left: 0;
+    }
+
+    .button_scroll_roadmap button {
+        width: 60px;
+    }
+
+    .roadmap_item img {
+        width: 200px;
+    }
+
+    .tokenomics_list_all img {
+        width: 400px;
+        /* transform: translateX(-20%); */
+    }
+
 }
