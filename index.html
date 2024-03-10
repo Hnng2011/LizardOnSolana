@@ -30,6 +30,8 @@
         <a href="#roadmap">Roadmap</a>
         <a href="#partner">Partner</a>
         <a href="#social">Socials</a>
+        <a href="https://presale.lizardonsol.com/" target="_blank">Presale</a>
+        <a href="https://mint.lizardonsol.com/" target="_blank">NFTs</a>
     </div>
 
     <header id="home">
@@ -298,16 +300,21 @@
 
             function smoothScroll(e) {
                 e.preventDefault();
+                var targetHref = this.getAttribute('href');
 
-                var targetId = this.getAttribute('href').substring(1);
-                var targetElement = document.getElementById(targetId);
+                if (!targetHref.includes('https://')) {
+                    var targetId = targetHref.substring(1);
+                    var targetElement = document.getElementById(targetId);
 
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop,
-                        behavior: 'smooth'
-                    });
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
                 }
+
+                else { window.open(targetHref, '_blank'); }
 
                 var navigationBar = document.querySelector('.navigation_bar');
                 var hamburgerMenu = document.querySelector('.hamburger_menu');
