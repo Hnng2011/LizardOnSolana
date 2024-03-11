@@ -280,7 +280,8 @@ header {
     background-color: var(--color-black);
     font-family: 'Memefont', 'Noto Sans KR', sans-serif;
     width: 100%;
-    min-height: 100vh;
+    max-height: 900px;
+    height: 100vh;
     margin: 0 auto;
     text-align: center;
     padding: 36px;
@@ -545,7 +546,8 @@ header {
     background-color: var(--color-black);
     font-family: 'Memefont', 'Noto Sans KR', sans-serif;
     overflow: hidden;
-    min-height: 90vh;
+    max-height: 900px;
+    height: 100vh;
     position: relative;
 }
 
@@ -655,8 +657,9 @@ header {
 }
 
 .about_hero {
+    max-height: 900px;
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     font-family: 'Memefont', 'Noto Sans KR', sans-serif;
 }
 
