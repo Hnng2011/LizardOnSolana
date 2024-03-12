@@ -19,19 +19,21 @@
     <div class="hamburger_menu" onclick="toggleActive()">
         <div></div>
     </div>
-    <div class="navigation_bar">
+    <div class="navigation_bar main">
         <video autoplay muted loop id="video">
             <source src="./assets/images/background/coin.webm" type="video/webm">
             Your browser does not support the video tag.
         </video>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#token">Tokenomics</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#partner">Partner</a>
-        <a href="#social">Socials</a>
-        <a href="https://presale.lizardonsol.com/" target="_blank">Presale</a>
-        <a href="https://mint.lizardonsol.com/" target="_blank">NFTs</a>
+        <div class="navigation_bar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#token">Tokenomics</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#partner">Partner</a>
+            <a href="#social">Socials</a>
+            <a href="#" target="_blank">Presale</a> <!-- https://presale.lizardonsol.com/-->
+            <a href="#" target="_blank">Mint</a> <!-- https://mint.lizardonsol.com/-->
+        </div>
     </div>
 
     <header id="home">
@@ -55,6 +57,20 @@
 
     <div class="marquee">
         <div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
+            <div>$LIZA</div>
             <div>$LIZA</div>
             <div>$LIZA</div>
             <div>$LIZA</div>
@@ -356,14 +372,6 @@
             });
         };
 
-        var navigationBar = document.querySelector('.navigation_bar');
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 80) {
-                navigationBar.classList.add('scrolling');
-            } else {
-                navigationBar.classList.remove('scrolling');
-            }
-        });
 
 
         function playVideo() {
