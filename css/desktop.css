@@ -5,7 +5,9 @@
     padding: 24px;
 }
 
-.navigation_bar.main {
+.navigation_main {
+    position: fixed;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -13,6 +15,7 @@
     background-color: rgba(0, 133, 133, 0.801);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    z-index: 99;
 }
 
 .hamburger_menu {
@@ -25,16 +28,11 @@ video {
 
 .navigation_bar {
     font-family: 'Memefont', 'Noto Sans KR', sans-serif;
-    position: fixed;
-    width: 100%;
     transition: 0.5s ease-in-out;
     display: flex;
     justify-content: end;
     align-items: center;
     gap: 36px;
-    top: 0%;
-    right: 0%;
-    z-index: 99;
     background-color: transparent;
     padding-right: 24px;
     height: 80px;
@@ -48,7 +46,7 @@ video {
     color: var(--color-white);
 }
 
-.navigation_bar video {
+.navigation_main video {
     width: 80px;
     height: 80px;
     z-index: 1;
@@ -56,7 +54,7 @@ video {
 
 header {
     height: 100vh;
-    min-height: 400px;
+    max-height: fit-content;
     position: relative;
     overflow: hidden;
 }
@@ -438,6 +436,7 @@ header {
 }
 
 .roadmap_list {
+    position: relative;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -457,9 +456,9 @@ header {
     display: flex;
     justify-content: space-between;
     width: 78%;
-    top: 45%;
-    left: 11%;
-
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .button_scroll_roadmap button {
@@ -668,6 +667,7 @@ header {
     width: 100vw;
     height: 100vh;
     font-family: 'Memefont', 'Noto Sans KR', sans-serif;
+    overflow: hidden;
 }
 
 .about_hero .container {
@@ -699,9 +699,14 @@ header {
     transform: scale(1);
 }
 
+.about_hero .about_content {
+    flex-shrink: 0;
+    width: 50%;
+}
+
 .about_content {
     flex-shrink: 0;
-    width: 30vw;
+    width: 40%;
 }
 
 .about_content h2 {
@@ -850,17 +855,14 @@ header {
         overflow-x: hidden;
     }
 
+    .button_scroll_roadmap {
+        width: 85vw;
+    }
+
     .roadmap_item {
         width: 300px;
         height: fit-content;
         font-size: 0.8rem;
-    }
-
-    .button_scroll_roadmap {
-        padding: 0 24px;
-        width: 100vw;
-        justify-content: space-between;
-        left: 0;
     }
 
     .button_scroll_roadmap button {

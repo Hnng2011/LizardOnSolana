@@ -1,7 +1,4 @@
 @media screen and (max-width: 768px) {
-
-
-
     .main_header {
         align-items: center;
     }
@@ -11,7 +8,7 @@
         width: 35px;
         position: fixed;
         top: 2%;
-        right: 2%;
+        right: 4%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -57,7 +54,7 @@
     }
 
     .hamburger_menu.active {
-        right: 32%;
+        right: 37%;
     }
 
     .hamburger_menu.active div {
@@ -76,54 +73,52 @@
         transform: rotate(-45deg);
     }
 
-
-    .navigation_bar.main {
+    .navigation_main {
+        z-index: 99;
         top: 0;
         right: 0;
         height: 100vh;
-        width: 30%;
-        flex-direction: column;
+        width: 35%;
+        flex-direction: column !important;
         align-items: center;
         justify-content: start;
         border-radius: 12px 0 0 12px;
         transform: translateX(100%);
-
-        padding-right: 0;
+        transition: transform 0.5s ease-in-out;
     }
 
     .navigation_bar {
         height: 100vh;
+        position: static;
         display: flex;
-        flex-direction: column;
+        flex-direction: column !important;
         justify-content: center;
         align-items: center;
         padding-right: 0;
     }
 
-    .navigation_bar.main.active {
+    .navigation_main.active {
         transform: translateX(0);
-        transition: transform 0.5s ease-in-out;
     }
 
-
-    .navigation_bar .hamburger_menu {
+    .navigation_main .hamburger_menu {
         position: relative;
         transform: translateX(50px);
     }
 
-    .navigation_bar .hamburger_menu div {
+    .navigation_main .hamburger_menu div {
         width: 0;
         background-color: 0;
         border: none;
     }
 
-    .navigation_bar .hamburger_menu::after {
+    .navigation_main .hamburger_menu::after {
         top: 50%;
         left: 50%;
         transform: rotate(45deg);
     }
 
-    .navigation_bar .hamburger_menu::before {
+    .navigation_main .hamburger_menu::before {
         top: 50%;
         left: 50%;
         transform: rotate(-45deg);
@@ -306,7 +301,7 @@
     }
 
     .about_content {
-        width: 100%;
+        width: 100% !important;
         padding: 12px;
     }
 
