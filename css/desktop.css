@@ -1,15 +1,17 @@
 .container {
     height: 100%;
+    width: 100%;
     max-width: 1300px;
     margin: 0 auto;
     padding: 24px;
 }
 
 .navigation_main {
+    padding: 0 24px;
     position: fixed;
-    width: 100%;
+    width: 100vw;
+    overflow: hidden;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 133, 133, 0.801);
@@ -27,15 +29,15 @@ video {
 }
 
 .navigation_bar {
+    height: 100%;
     font-family: 'Memefont', 'Noto Sans KR', sans-serif;
     transition: 0.5s ease-in-out;
     display: flex;
     justify-content: end;
     align-items: center;
-    gap: 36px;
+    gap: 24px;
     background-color: transparent;
     padding-right: 24px;
-    height: 80px;
 }
 
 .navigation_bar a {
@@ -88,6 +90,7 @@ header {
     left: 0;
     bottom: -24px;
     height: 70vh;
+    max-height: 900px;
     aspect-ratio: 1/1;
     z-index: -1;
     transform: translateY(10%);
@@ -281,7 +284,7 @@ header {
     background-color: var(--color-black);
     font-family: 'Memefont', 'Noto Sans KR', sans-serif;
     width: 100%;
-    min-height: fit-content;
+    max-height: 1400px;
     height: 100vh;
     margin: 0 auto;
     text-align: center;
@@ -393,12 +396,12 @@ header {
 }
 
 .roadmap_hero {
-    min-height: 400px;
+    max-height: 1400px;
     width: 100%;
-    min-height: 100vh;
     margin: auto;
     text-align: left;
     position: relative;
+    overflow: hidden;
 }
 
 .roadmap_head {
@@ -459,6 +462,7 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    max-width: 1500px;
 }
 
 .button_scroll_roadmap button {
@@ -551,14 +555,14 @@ header {
     width: 100vw;
     background-color: var(--color-black);
     font-family: 'Memefont', 'Noto Sans KR', sans-serif;
+    max-height: fit-content;
+
     overflow: hidden;
-    min-height: fit-content;
-    height: 100vh;
-    position: relative;
 }
 
 .tokennomics_hero .container {
     height: fit-content;
+    position: relative;
 }
 
 .tokennomics_hero h2 {
@@ -663,7 +667,7 @@ header {
 }
 
 .about_hero {
-    min-height: fit-content;
+    max-height: 1400px;
     width: 100vw;
     height: 100vh;
     font-family: 'Memefont', 'Noto Sans KR', sans-serif;
@@ -685,6 +689,7 @@ header {
     animation: meme2 5s ease-in-out infinite;
 }
 
+
 @keyframes meme2 {
     0% {
         transform: rotate(0deg);
@@ -701,13 +706,15 @@ header {
 
 .about_hero .about_content {
     flex-shrink: 0;
-    width: 50%;
+    width: 45%;
 }
 
-.about_content {
+.about_hero .about_image {
     flex-shrink: 0;
-    width: 40%;
+    width: 45%;
 }
+
+
 
 .about_content h2 {
     color: var(--color-secondary);
@@ -733,6 +740,7 @@ header {
 .social_hero {
     width: 100%;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .social_hero .container {
@@ -824,14 +832,8 @@ header {
 }
 
 @media screen and (max-width: 1900px) {
-
     .header_logo {
         font-size: 8rem !important;
-    }
-
-
-    .about_image {
-        width: 40vw;
     }
 
     .roadmap_head.token {
@@ -875,7 +877,7 @@ header {
 
     .tokenomics_list_all img {
         width: 400px;
-        /* transform: translateX(-20%); */
+        transform: translateX(-20%);
     }
 
     .marquee div {
@@ -884,6 +886,10 @@ header {
 
     .marquee div div {
         width: 5vw;
+    }
+
+    .navigation_main a {
+        font-size: 0.9rem;
     }
 
     @keyframes marquee {

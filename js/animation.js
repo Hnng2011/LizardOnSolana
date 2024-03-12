@@ -127,19 +127,42 @@ function scrollContainer(direction) {
     const scrollContainer = document.querySelector('.roadmap_list');
     const leftButton = document.querySelectorAll('.button_scroll_roadmap button')[0];
     const rightButton = document.querySelectorAll('.button_scroll_roadmap button')[1];
+    const scrollAmount = 300;
 
-    if (direction === 'left' && scrollContainer.scrollLeft > 0) {
-        scrollContainer.scrollLeft -= 300;
-        rightButton.style.opacity = '1';
-        rightButton.style.pointerEvents = 'auto';
-        leftButton.style.opacity = '0';
-        leftButton.style.pointerEvents = 'none';
-    } else if (direction === 'right' && scrollContainer.scrollLeft + scrollContainer.clientWidth < scrollContainer.scrollWidth) {
-        scrollContainer.scrollLeft += 300;
-        leftButton.style.opacity = '1';
-        leftButton.style.pointerEvents = 'auto';
-        rightButton.style.opacity = '0';
-        rightButton.style.pointerEvents = 'none';
+
+    if (direction === 'left') {
+        const newScrollLeft = scrollContainer.scrollLeft - scrollAmount;
+        if (newScrollLeft <= 100) {
+            scrollContainer.scrollLeft = newScrollLeft;
+            scrollContainer.scrollLeft = 0;
+            leftButton.style.opacity = '0';
+            leftButton.style.pointerEvents = 'none';
+            rightButton.style.opacity = '1';
+            rightButton.style.pointerEvents = 'auto';
+        } else {
+            scrollContainer.scrollLeft = newScrollLeft;
+            leftButton.style.opacity = '1';
+            leftButton.style.pointerEvents = 'auto';
+            rightButton.style.opacity = '1';
+            rightButton.style.pointerEvents = 'auto';
+        }
+
+    } else if (direction === 'right') {
+        const newScrollLeft = scrollContainer.scrollLeft + scrollAmount;
+        console.log(scrollContainer.scrollWidth - scrollContainer.clientWidth - newScrollLeft);
+        if (scrollContainer.scrollWidth - scrollContainer.clientWidth - newScrollLeft <= 100) {
+            scrollContainer.scrollLeft = newScrollLeft;
+            rightButton.style.opacity = '0';
+            rightButton.style.pointerEvents = 'none';
+            leftButton.style.opacity = '1';
+            leftButton.style.pointerEvents = 'auto';
+        } else {
+            scrollContainer.scrollLeft = newScrollLeft;
+            rightButton.style.opacity = '1';
+            rightButton.style.pointerEvents = 'auto';
+            leftButton.style.opacity = '1';
+            leftButton.style.pointerEvents = 'auto';
+        }
     }
 }
 
