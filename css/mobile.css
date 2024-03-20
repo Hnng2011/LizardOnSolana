@@ -219,6 +219,7 @@
     }
 
     .roadmap_hero {
+        max-height: fit-content;
         height: fit-content;
         overflow: hidden;
     }
