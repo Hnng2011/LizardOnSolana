@@ -7,7 +7,7 @@
 }
 
 .navigation_main {
-    padding: 0 24px;
+    padding: 6px 24px;
     position: fixed;
     width: 100vw;
     overflow: hidden;
@@ -140,11 +140,25 @@ header {
 }
 
 .main_header .header_logo {
+    height: 300px;
+    width: 700px;
     font-size: 12rem;
     font-weight: 700;
     color: var(--color-black);
     opacity: 0;
     transition: 0.5s ease-in-out;
+    stroke: rgba(252, 238, 240, 0.918);
+    stroke-width: 0;
+    stroke-dasharray: 900;
+}
+
+.header_logo text {
+    font-size: 12rem;
+}
+
+.header_logo.active {
+    stroke-width: 1;
+    animation: writeBase 6s ease-in-out;
 }
 
 .main_header .header_describe {
@@ -430,7 +444,7 @@ header {
 @keyframes writeBase {
     0% {
 
-        stroke-dashoffset: 500;
+        stroke-dashoffset: 900;
     }
 
     80% {
@@ -833,7 +847,11 @@ header {
 
 .navigation_bar :where(a:nth-child(7), a:nth-child(8)) {
     position: relative;
-    color: var(--color-secondary) !important;
+    color: var(--color-black) !important;
+    border-radius: 10px;
+    border: 2px solid var(--color-black);
+    background-color: var(--color-secondary);
+    padding: 6px;
 }
 
 .navigation_bar img {
@@ -873,7 +891,7 @@ header {
 }
 
 @media screen and (max-width: 1900px) {
-    .header_logo {
+    .header_logo text {
         font-size: 8rem !important;
     }
 

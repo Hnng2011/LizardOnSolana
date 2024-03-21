@@ -133,8 +133,8 @@
         padding-top: 10vh;
     }
 
-    .main_header .header_logo {
-        font-size: 5rem !important;
+    .header_logo text {
+        font-size: 6rem !important;
         font-weight: 700;
     }
 
