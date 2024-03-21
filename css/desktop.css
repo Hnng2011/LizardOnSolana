@@ -831,6 +831,46 @@ header {
     opacity: 1;
 }
 
+.navigation_bar :where(a:nth-child(7), a:nth-child(8)) {
+    position: relative;
+}
+
+.navigation_bar img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: mov-nav 4s ease-in-out infinite;
+}
+
+@keyframes mov-nav {
+    0% {
+        left: 0;
+        transform: translateY(-100%) scaleX(1);
+    }
+
+    50% {
+        left: 80%;
+        transform: translateY(-100%) scaleX(1);
+    }
+
+    52% {
+        left: 80%;
+        transform: translateY(-100%) scaleX(-1);
+    }
+
+    98% {
+        left: 0%;
+        transform: translateY(-100%) scaleX(-1);
+    }
+
+    100% {
+        left: 0%;
+        transform: translateY(-100%) scaleX(1);
+    }
+}
+
 @media screen and (max-width: 1900px) {
     .header_logo {
         font-size: 8rem !important;
